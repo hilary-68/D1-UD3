@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+		
+		<form action="#" th:action="@{/formulario3}" th:object="${dato3}" method="post">
+		
+			<p> <input type="checkbox" th:field="*{peliculas}" value="Constatine" />Constantine </p>
+			<p> <input type="checkbox" th:field="*{peliculas}"  value="El Castillo Ambulante "/> El Castillo Ambulante </p>
+			<p><input type="checkbox" th:field="*{peliculas}"  value="La Princesa Mononoke "/> La Princesa Mononoke </p>
+			<p><input type="checkbox" th:field="*{peliculas}"  value="Practical Magic"/> Practical Magic </p>
+			<p th:if="${#fields.hasErrors('peliculas')}" th:errors="*{peliculas}" >  </p>
+		
+			<button type="submit"> Enviar </button>
+		</form>
+		
+    </body>
+</html>
+

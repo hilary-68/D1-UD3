@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+		
+		<form action="#" th:action="@{/formulario2}" th:object="${dato2}" method="post">
+		
+			<p>Genero: 
+				<input type="radio" th:field="*{genero}" value="femenino"/> Femenino 
+				<input type="radio" th:field="*{genero}" value="masculino"/> Masculino 
+			</p>
+			<p th:if="${#fields.hasErrors('genero')}" th:errors="*{genero}" ></p>
+			
+			<button type="submit">Siguiente</button>
+
+		</form>
+			
+	</body>
+</html>
